@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/06f831659bc7b1b3fffe4d273312050a02f04117.png'; // Adjust the path as necessary
 
+
 function Footer() {
   return (
     <footer className="bg-[#1a1a2e] text-white py-12 px-4 sm:px-6 lg:px-8 font-inter">
