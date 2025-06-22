@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaGoogle, FaArrowRight,FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const LoginPopup = () => {
   return (
@@ -58,9 +59,11 @@ const LoginPopup = () => {
         {/* Bottom Text */}
         <p className="text-sm text-center text-gray-400">
           Don’t have an account?{' '}
-          <span className="text-white font-semibold cursor-pointer hover:underline">
-            Create Account
-          </span>
+          <Link to="/Signup">
+            <span className="text-white font-semibold cursor-pointer hover:underline">
+              Create Account
+            </span>
+          </Link>
         </p>
       </div>
     </div>
