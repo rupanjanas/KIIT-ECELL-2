@@ -5,6 +5,8 @@ import About from './pages/About';
 import './index.css'; // Import your global styles, including Tailwind CSS
 import SignUp from './pages/Signup';
 import LoginPopup from './pages/Loginpopup';
+import ProfileCard from './pages/ProfileCard';
+
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <About/>
       <SignUp/>
       <LoginPopup/>
+      <ProfileCard/>
+
       <Footer />
     </>
   );
