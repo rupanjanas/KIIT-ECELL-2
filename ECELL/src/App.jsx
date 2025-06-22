@@ -4,7 +4,7 @@ import Hero from './pages/Hero'; // Assuming Hero.jsx is in the same directory
 import About from './pages/About';
 import './index.css'; // Import your global styles, including Tailwind CSS
 import SignUp from './pages/Signup';
-
+import LoginPopup from './pages/Loginpopup';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Hero />
       <About/>
       <SignUp/>
+      <LoginPopup/>
       <Footer />
     </>
   );
