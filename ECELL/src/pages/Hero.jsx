@@ -1,14 +1,19 @@
 // Hero.jsx
 import React from 'react';
 
+
 const Hero = () => {
   return (
-    < div className="w-full min-h-screen bg-no-repeat bg-center bg-contain mt-20 bg-black"
-     style={{ backgroundImage: "url('/Hero grid.svg')" }}>
-  {/* Content */}     
+    
+  < div className="w-full min-h-screen bg-no-repeat bg-center bg-contain bg-black"
+     style={{ backgroundImage: "url('/hero section bg.svg')" }}>
+
+
+
      <main className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-4 text-center">
   <div className="relative flex items-center justify-center w-full max-w-2xl mx-auto my-8">
     <div className="group flex flex-row justify-center overflow-hidden">
+      <img src="/Invisible triangle.svg" alt="Centered Logo" className="w-200 200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
       <svg
         viewBox="0 0 300 434"
         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +86,9 @@ const Hero = () => {
         </p>
          
       </main>
+    
     </div>
+    
   
   );
 };

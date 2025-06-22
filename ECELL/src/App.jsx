@@ -12,18 +12,22 @@ function App() {
   return (
     <Router>
       <Routes>
-       
-       
+        {/* ✅ Homepage Route */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+          
+              <Footer />
+            </>
+          }
+        />
+
         <Route path="/Signup" element={<SignUp />} />
-        
         <Route path="/ProfileCard" element={<ProfileCard />} />
       </Routes>
-
-       {/* Outside Routes so it's shown on all pages */}
-       <Hero />
-        <About />
-        <LoginPopup/>
-        <Footer />
     </Router>
   );
 }

@@ -1,10 +1,9 @@
-// Hero.jsx
 import React from 'react';
 
 const About = () => {
   return (
-    < div className=" bg-no-repeat bg-center bg-black mt-0"
-     style={{ backgroundImage: "url('/About circle.svg')" }}>
+    < div className="bg-cover  "
+     style={{ backgroundImage: "url('/about us section bg.svg')" }}>
   {/* Content */}     
     <div className="text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-blue-400 tracking-wide">About Us</h2>
