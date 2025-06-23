@@ -12,22 +12,20 @@ import About from "./pages/About";
 function App() {
   return (
     <Router>
-      {/* Navbar is shown on all pages */}
-     
-
       <Routes>
         <Route
           path="/"
           element={
             <>
-               <Navbar />
+              <Navbar />
               <Hero />
-              <About/>
+              <About />
               <Footer />
             </>
           }
         />
         <Route path="/Signup" element={<SignUp />} />
+        <Route path="/login" element={<LoginPopup />} />
         <Route path="/ProfileCard" element={<ProfileCard />} />
       </Routes>
     </Router>
@@ -35,4 +33,3 @@ function App() {
 }
 
 export default App;
-

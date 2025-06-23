@@ -1,15 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
-import Login from "./Loginpopup";
+import Login from "./Loginpopup"; // Adjust path if needed
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const overlayRef = useRef(null);
   const popupRef = useRef(null);
 
+  // Close popup on outside click
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (popupRef.current && !popupRef.current.contains(e.target)) {
+    const handleClickOutside = (event) => {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target) &&
+        overlayRef.current &&
+        overlayRef.current.contains(event.target)
+      ) {
         setShowLogin(false);
       }
     };
@@ -18,9 +25,7 @@ const Navbar = () => {
       document.addEventListener("mousedown", handleClickOutside);
     }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [showLogin]);
 
   return (
@@ -79,15 +84,26 @@ const Navbar = () => {
         )}
       </nav>
 
-      {/* Popup Wrapper */}
+      {/* Login Popup */}
       {showLogin && (
-  <div className="fixed inset-0 z-[999] bg-black bg-opacity-60 flex items-center justify-center px-4">
-    <div ref={popupRef} className="w-full max-w-md">
-      <Login />
-    </div>
-  </div>
-)}
-
+        <div
+          ref={overlayRef}
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[999]"
+        >
+          <div
+            ref={popupRef}
+            className="relative bg-[#1a2b32] rounded-2xl shadow-lg p-8 md:p-10 max-w-md w-[90%] text-white space-y-6"
+          >
+            <button
+              className="absolute top-2 right-3 text-white font-bold text-xl"
+              onClick={() => setShowLogin(false)}
+            >
+              &times;
+            </button>
+            <Login />
+          </div>
+        </div>
+      )}
     </>
   );
 };
