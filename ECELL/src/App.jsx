@@ -12,13 +12,14 @@ function App() {
   return (
     <Router>
       {/* Navbar is shown on all pages */}
-      <Navbar />
+     
 
       <Routes>
         <Route
           path="/"
           element={
             <>
+               <Navbar />
               <Hero />
               <Footer />
             </>
