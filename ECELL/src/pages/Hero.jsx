@@ -14,18 +14,22 @@ const Hero = () => {
             <div className="group relative w-full h-full flex items-center justify-center">
               
               {/* Stacked PNG on top of SVGs */}
-<img
-  src="/KIIT logo white.png"
-  alt="Stacked Overlay"
-  className="absolute top-[80%]  translate-x-3 -translate-y-1/2 w-[400px] sm:w-[400px] md:w-[450px] z-40 opacity-100 hover:opacity-0"
-/>
+         <div className="group w-full h-screen">
+  {/* Bottom Layer - Triangle SVG */}
+  <img
+    src="/Invisible triangle.svg"
+    alt="Centered Logo"
+    className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] sm:w-[400px] md:w-[500px] z-30 opacity-100 group-hover:opacity-0 transition-opacity duration-300"
+  />
 
-{/* Centered Triangle below */}
-<img
-  src="/Invisible triangle.svg"
-  alt="Centered Logo"
-  className="absolute top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] sm:w-[360px] md:w-[500px] z-30 opacity-100 hover:opacity-0"
-/>
+  {/* Top Layer - KIIT Logo */}
+  <img
+    src="/KIIT logo white.png"
+    alt="Stacked Overlay"
+    className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] sm:w-[400px] md:w-[450px] z-40 opacity-100 group-hover:opacity-0 transition-opacity duration-300"
+  />
+</div>
+
 
               {/* Flex Row for 3 SVGs */}
               <div className="flex items-end justify-center">
