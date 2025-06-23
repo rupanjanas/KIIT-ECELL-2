@@ -1,29 +1,35 @@
-import React from 'react';
-import Footer from './pages/footer';
-import Hero from './pages/Hero';
-import About from './pages/About';
-import './index.css';
-import SignUp from './pages/Signup';
-import LoginPopup from './pages/Loginpopup';
-import ProfileCard from './pages/ProfileCard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./pages/footer";
+import Hero from "./pages/Hero";
+import SignUp from "./pages/Signup";
+import LoginPopup from "./pages/Loginpopup";
+import ProfileCard from "./pages/ProfileCard";
+import Navbar from "./pages/Navbar";
+import "./index.css";
+import About from "./pages/About";
+
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
-       
-       
-        <Route path="/Signup" element={<SignUp />} />
-        
-        <Route path="/ProfileCard" element={<ProfileCard />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<LoginPopup />} />
+        <Route path="/profilecard" element={<ProfileCard />} />
       </Routes>
-
-       {/* Outside Routes so it's shown on all pages */}
-       <Hero />
-        <About />
-        <LoginPopup/>
-        <Footer />
     </Router>
   );
 }
