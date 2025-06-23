@@ -98,6 +98,9 @@ const Navbar = () => {
               className="absolute top-2 right-3 text-white font-bold text-xl"
               onClick={() => setShowLogin(false)}
             >
+               <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[999]">
+    <Login onClose={() => setShowLogin(false)} />
+  </div>
               &times;
             </button>
             <Login />

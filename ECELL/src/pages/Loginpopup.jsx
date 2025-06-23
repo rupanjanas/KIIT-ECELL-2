@@ -5,6 +5,9 @@ import { Link, useNavigate } from 'react-router-dom'; // ✅ Added useNavigate
 const LoginPopup = ({ onClose }) => {
   const popupRef = useRef(null);
   const navigate = useNavigate(); // ✅ Initialize navigate
+  const handleClose = () => {
+    navigate('/'); // or navigate(-1) to go back
+  };
 
   // Close on outside click
   useEffect(() => {
@@ -49,12 +52,12 @@ const LoginPopup = ({ onClose }) => {
             placeholder="Password"
             className="w-full bg-transparent focus:outline-none text-sm"
           />
-          <button
-            onClick={() => navigate('/')} // ✅ Redirect to homepage
-            className="p-2 rounded-full border-2 transition"
-          >
-            <FaArrowRight className="text-white" />
-          </button>
+         <button
+  onClick={handleClose}
+  className="p-2 rounded-full border-2 transition"
+>
+  <FaArrowRight className="text-white" />
+</button>
         </div>
 
         {/* Remember Me */}
