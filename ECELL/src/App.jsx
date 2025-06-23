@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from './pages/footer';
 import Hero from './pages/Hero';
-import About from './pages/About';
 import './index.css';
 import SignUp from './pages/Signup';
 import LoginPopup from './pages/Loginpopup';
@@ -18,7 +17,7 @@ function App() {
           element={
             <>
               <Hero />
-              <About />
+              
           
               <Footer />
             </>
