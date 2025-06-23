@@ -3,6 +3,7 @@ import Footer from './pages/footer';
 import Hero from './pages/Hero';
 import './index.css';
 import SignUp from './pages/Signup';
+import About from './pages/About';
 import LoginPopup from './pages/Loginpopup';
 import ProfileCard from './pages/ProfileCard';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,7 +18,7 @@ function App() {
           element={
             <>
               <Hero />
-              
+              <About/>
           
               <Footer />
             </>
