@@ -1,30 +1,29 @@
-import React from 'react';
-import Footer from './pages/footer';
-import Hero from './pages/Hero';
-import './index.css';
-import SignUp from './pages/Signup';
-import About from './pages/About';
-import LoginPopup from './pages/Loginpopup';
-import ProfileCard from './pages/ProfileCard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./pages/footer";
+import Hero from "./pages/Hero";
+import SignUp from "./pages/Signup";
+import LoginPopup from "./pages/Loginpopup";
+import ProfileCard from "./pages/ProfileCard";
+import Navbar from "./pages/Navbar";
+import "./index.css";
 
 function App() {
   return (
     <Router>
+      {/* Navbar is shown on all pages */}
+      <Navbar />
+
       <Routes>
-        {/* ✅ Homepage Route */}
         <Route
           path="/"
           element={
             <>
               <Hero />
-              <About/>
-          
               <Footer />
             </>
           }
         />
-
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/ProfileCard" element={<ProfileCard />} />
       </Routes>
@@ -33,3 +32,4 @@ function App() {
 }
 
 export default App;
+
