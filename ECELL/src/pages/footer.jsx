@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/06f831659bc7b1b3fffe4d273312050a02f04117.png'; // Adjust the path as necessary
+import logo from '/KIIT logo white.png'; // Adjust the path as necessary
 
 
 function Footer() {
