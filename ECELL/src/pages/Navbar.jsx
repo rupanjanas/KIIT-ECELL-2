@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 bg-black text-white w-full px-6 py-4">
+      <nav className="fixed top-0 left-0 z-50 bg-black text-white w-full px-6 py-4 pt-20">
         <div className="flex justify-between items-center">
           {/* Hamburger (Mobile Only) */}
           <div className="md:hidden">
@@ -40,29 +40,27 @@ const Navbar = () => {
           </div>
 
           {/* Left Tabs */}
-          <div className="hidden md:flex space-x-12 text-sm sm:text-base font-medium">
-            <span className="hover:text-gray-300 cursor-pointer">Home</span>
-            <span className="hover:text-gray-300 cursor-pointer">About Us</span>
-            <span className="hover:text-gray-300 cursor-pointer">Blogs</span>
-          </div>
+        <div className="hidden md:flex flex-1 justify-start space-x-12 text-sm sm:text-base font-medium">
+      <span className="hover:text-blue-300 cursor-pointer">Home</span>
+      <span className="hover:text-blue-300 cursor-pointer">About Us</span>
+      <span className="hover:text-blue-300 cursor-pointer">Blogs</span>
+    </div>
 
           {/* Center Logo */}
-          <div className="text-xl sm:text-2xl tracking-wide text-white text-center font-poppins">
-            KIIT E-CELL
-          </div>
+          <div className="text-xl sm:text-2xl font-poppins text-white text-center flex-1 justify-center hidden md:flex">
+      KIIT E-CELL
+    </div>
 
           {/* Right Tabs */}
-          <div className="hidden md:flex space-x-6 text-sm sm:text-base font-medium items-center">
-            <span className="hover:text-gray-300 cursor-pointer">Events</span>
-            <span className="hover:text-gray-300 cursor-pointer">Join Us</span>
-
-            {/* Profile Button */}
-            <button
-              onClick={() => setShowLogin(true)}
-              className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black font-semibold"
-            >
-              U
-            </button>
+          <div className="hidden md:flex flex-1 justify-end space-x-6 text-sm sm:text-base font-medium items-center">
+      <span className="hover:text-blue-300 cursor-pointer">Events</span>
+      <span className="hover:text-blue-300 cursor-pointer">Join Us</span>
+      <button
+        onClick={() => setShowLogin(true)}
+        className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black font-semibold"
+      >
+        U
+      </button>
           </div>
         </div>
 
