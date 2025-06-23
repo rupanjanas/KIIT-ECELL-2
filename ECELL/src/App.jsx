@@ -7,6 +7,7 @@ import LoginPopup from "./pages/Loginpopup";
 import ProfileCard from "./pages/ProfileCard";
 import Navbar from "./pages/Navbar";
 import "./index.css";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <>
                <Navbar />
               <Hero />
+              <About/>
               <Footer />
             </>
           }
