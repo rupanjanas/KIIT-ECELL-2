@@ -9,24 +9,26 @@ import Navbar from "./pages/Navbar";
 import "./index.css";
 import About from "./pages/About";
 
+
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Navbar />
               <Hero />
               <About />
               <Footer />
             </>
           }
         />
-        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LoginPopup />} />
-        <Route path="/ProfileCard" element={<ProfileCard />} />
+        <Route path="/profilecard" element={<ProfileCard />} />
       </Routes>
     </Router>
   );

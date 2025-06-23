@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import Login from "./Loginpopup"; // Adjust path if needed
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 bg-black text-white w-full px-6 py-4 pt-20">
+      <nav className="fixed top-0 left-0 z-50 bg-black text-white w-full px-6 py-4 pt-10">
         <div className="flex justify-between items-center">
           {/* Hamburger (Mobile Only) */}
           <div className="md:hidden">
@@ -41,9 +43,9 @@ const Navbar = () => {
 
           {/* Left Tabs */}
         <div className="hidden md:flex flex-1 justify-start space-x-12 text-sm sm:text-base font-medium">
-      <span className="hover:text-blue-300 cursor-pointer">Home</span>
-      <span className="hover:text-blue-300 cursor-pointer">About Us</span>
-      <span className="hover:text-blue-300 cursor-pointer">Blogs</span>
+      <Link to="/" className="hover:text-blue-300 cursor-pointer">Home</Link>
+      <Link to="/about" className="hover:text-blue-300 cursor-pointer">About Us</Link>
+      <Link to="/" className="hover:text-blue-300 cursor-pointer">Blogs</Link>
     </div>
 
           {/* Center Logo */}
@@ -53,8 +55,8 @@ const Navbar = () => {
 
           {/* Right Tabs */}
           <div className="hidden md:flex flex-1 justify-end space-x-6 text-sm sm:text-base font-medium items-center">
-      <span className="hover:text-blue-300 cursor-pointer">Events</span>
-      <span className="hover:text-blue-300 cursor-pointer">Join Us</span>
+      <Link to="/" className="hover:text-blue-300 cursor-pointer">Events</Link>
+      <Link to="/Signup" className="hover:text-blue-300 cursor-pointer">Join Us</Link>
       <button
         onClick={() => setShowLogin(true)}
         className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black font-semibold"
